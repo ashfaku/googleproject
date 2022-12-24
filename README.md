@@ -12,7 +12,7 @@ Movie Recommender | Web scrape list of movies, their reviews, and whatever else 
 
 
 
-Skills we each alr know (just to know what we're starting with)
+Skills we each alr know (just to know what we're starting with) <br>
 Ashfak) JavaScript/React, Node, Python Flask, SQL, 
 
 
