@@ -1,6 +1,4 @@
-# googleproject Steven Hsui, Kirsten Shyu, Ashfak Uddin
-
-# Project Ideas
+# Steven Hsui, Kirsten Shyu, Ashfak Uddin
 
 Project Name | Description
 ------------ | -------------
@@ -13,7 +11,7 @@ Movie Recommender | Web scrape list of movies, their reviews, and whatever else 
 
 
 Skills we each alr know (just to know what we're starting with) <br>
-Ashfak) JavaScript/React, Node, Python Flask, SQL, 
+Ashfak) JavaScript/React, Node, Python Flask, SQL, MongoDB, Bootstrap (kinda), basic Java
 
 
 
