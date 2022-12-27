@@ -1,13 +1,13 @@
-# Steven Hsui, Kirsten Shyu, Ashfak Uddin
+By: Steven Hsui, Kirsten Shyu, Ashfak Uddin
 
-Project Name | Description
------------- | -------------
-To-do list with integrated calender | Steven fill this out
-Automatic Interpreter | Uses camera to record hand signs and spits out text translated from those signs
-Movie Recommender | Web scrape list of movies, their reviews, and whatever else from netflix or smth and recommend user certain movies based on their search words (searching "end of the world" could spit out pandemic related, ai-overlord related or whatever else movies)
+# Ideas
 
-Skills we each alr know (just to know what we're starting with) <br>
-Ashfak) JavaScript/React, Node, Express, Python Flask, SQL, MongoDB, Bootstrap (kinda), basic Java
+| Project Name                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| To-do list with integrated calender | Something like a planner. Traditional todo lists are for things that need to be completed by a certain time, and traditional calendars are for things that will be ongoing during a given time, so the project idea here is something that gives the best of both worlds. Example feature ideas: being able to see a spread of deadlines in a calendar view, seeing today's events in a task list view, ease of scheduling timeblock on calendar to work on a task item (maintaining referential relationship of the items btwn the list and calendar), etc. |
+| Automatic Interpreter               | Uses camera to record hand signs and spits out text translated from those signs                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Movie Recommender                   | Web scrape list of movies, their reviews, and whatever else from netflix or smth and recommend user certain movies based on their search words (searching "end of the world" could spit out pandemic related, ai-overlord related or whatever else movies)                                                                                                                                                                                                                                                                                                   |
 
-
-
+Skills we each alr know (just to know what we're starting with):
+- Ashfak: JavaScript/React, Node, Express, Python Flask, SQL, MongoDB, Bootstrap (kinda), basic Java
+- Steven: Vanilla JS and the basics of TS, Node.js, basic Python and SQL, HTML, CSS, C++, Java, Bash, Markdown
