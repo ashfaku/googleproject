@@ -1,0 +1,52 @@
+#monthList
+{
+    max-width: 0;
+    transition: max-width 1s ease-out;
+    background-color: green;
+}
+.month
+{
+    text-align: left;
+    margin-bottom: 2%;
+    max-width: 100%;
+    font-size: 0px;
+}
+@keyframes expand
+{
+    100%
+    {
+        font-size: 10px;
+    }
+}
+@keyframes contract
+{
+    0%
+    {
+        font-size: 10px;
+    }
+    100%
+    {
+        font-size: 0px;
+    }
+}
+.on 
+{
+    animation: expand 1s 1;
+}
+.off
+{
+    animation: contract 1s 1;
+}
+.monthButton
+{
+    background: none; 
+    font-size: inherit;
+    border: none;     
+    cursor: pointer;
+    animation-fill-mode: forwards;
+
+}
+.monthButton:hover
+{
+    background-color: red;
+}
