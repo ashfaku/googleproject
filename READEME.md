@@ -1,0 +1,1 @@
+original readme moved to [docs/planning/preliminary ideas.md](docs/planning/preliminary%20ideas.md)
