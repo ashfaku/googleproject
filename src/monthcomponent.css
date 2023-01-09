@@ -8,8 +8,10 @@
 {
     text-align: left;
     margin-bottom: 2%;
+    transition: max-height 1s ease-out;
     max-width: 100%;
     font-size: 0px;
+    max-height: 0;
 }
 @keyframes expand
 {
@@ -44,7 +46,6 @@
     border: none;     
     cursor: pointer;
     animation-fill-mode: forwards;
-
 }
 .monthButton:hover
 {
