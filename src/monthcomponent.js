@@ -6,8 +6,8 @@ const MonthComponent = (props) => {
     {
         let holder = monthNames[i];
         monthNames[i] = <div className = "month">    
-            <button className = "monthButton" onClick={() => {
-                    console.log(holder);
+            <button className = "monthButton" onClick={() => {     
+                    document.getElementById("calendar").style.visibility = "visible";
                 }
             }>{monthNames[i]}</button>
         </div>;
@@ -24,6 +24,8 @@ const MonthComponent = (props) => {
                     e.target.parentElement.children[i].children[0].classList.remove("on");
                     e.target.innerHTML = "+";
                     e.target.parentElement.children[i].parentElement.style.maxWidth = "0%";
+                    e.target.parentElement.children[i].style.maxHeight = "0";
+                    document.getElementById("calendar").style.marginLeft = "8%";
                 }
                 else
                 {
@@ -31,6 +33,9 @@ const MonthComponent = (props) => {
                     e.target.parentElement.children[i].children[0].classList.remove("off");
                     e.target.innerHTML = "-";
                     e.target.parentElement.children[i].parentElement.style.maxWidth = "15%";
+                    e.target.parentElement.children[i].style.maxHeight = "15%";
+
+                    document.getElementById("calendar").style.marginLeft = "15%";
                 }
             }
         }}>+

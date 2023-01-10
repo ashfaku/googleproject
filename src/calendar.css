@@ -1,0 +1,19 @@
+#calendar
+{
+    width: 70%;
+    margin-left: 20%;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    background-color: orange;
+}
+#calendarflex
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.dayBox
+{
+    background-color: green;
+    min-width: 13%; /* 100/7 cuz week is 7 days long, but 13% let 7 buttons fit in one row so lol */
+}
