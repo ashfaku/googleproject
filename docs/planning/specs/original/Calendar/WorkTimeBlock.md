@@ -6,6 +6,8 @@
 	- ID of the original task can be stored in a stringified json in the description on the Google Calendar side
 
 # Methods
+- constructor
+	- after superimplementation, parse and set the original task info from the API response of description
 - `getOriginalTask(): Task
 	- get the task that this work time block is for
 - `setOriginalTask(newTask: Task)`

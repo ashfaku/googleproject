@@ -6,6 +6,8 @@
 	- IDs of prereq tasks can be stored in a stringified json in the description on the Google Calendar side
 	
 # Methods
+- Constructor
+	- after superimplementation, parse the prerequisites data from the API response of description 
 - `getPrerequisites(): PrerequisiteTask[]`
 	- get this event's prerequisite tasks
 - `addPrerequisite(prereq: PrerequisiteTask): void`

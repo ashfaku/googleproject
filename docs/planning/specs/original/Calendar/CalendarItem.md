@@ -11,7 +11,7 @@
 
 # Methods
 - Constructor
-	- 
+	- set the id, title, start, end, description, based on what's passed in
 - `delete(): void`
 	- tells the Calendar client to delete this event
 - `getTitle(): String`
