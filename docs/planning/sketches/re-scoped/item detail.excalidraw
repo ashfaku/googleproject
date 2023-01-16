@@ -67,8 +67,8 @@
     },
     {
       "type": "text",
-      "version": 277,
-      "versionNonce": 698354824,
+      "version": 291,
+      "versionNonce": 35118563,
       "isDeleted": false,
       "id": "aVD8t8O2eg0LpT1Z0rGkc",
       "fillStyle": "hachure",
@@ -87,17 +87,17 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1673830174088,
+      "updated": 1673912215895,
       "link": null,
       "locked": false,
       "fontSize": 20,
       "fontFamily": 1,
-      "text": "Details from GCalendar or GTasks\n\n\n\n\n\n\n\n\n\n(if this is a work time block)\n\nFrom: 00:00 [edit]\nTo: 01:00 [edit]\n[delete]",
+      "text": "Details from GCalendar or GTasks\n\n\n\n\n\n\n\n\n\n(if this is a work time block)\n1/15/23 [edit]\nFrom: 00:00 [edit]\nTo: 01:00 [edit]\n[delete]",
       "baseline": 361,
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "Details from GCalendar or GTasks\n\n\n\n\n\n\n\n\n\n(if this is a work time block)\n\nFrom: 00:00 [edit]\nTo: 01:00 [edit]\n[delete]"
+      "originalText": "Details from GCalendar or GTasks\n\n\n\n\n\n\n\n\n\n(if this is a work time block)\n1/15/23 [edit]\nFrom: 00:00 [edit]\nTo: 01:00 [edit]\n[delete]"
     },
     {
       "type": "text",

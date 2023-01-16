@@ -14,5 +14,5 @@
 	- show the date on the top
 	- set the <-- and --> to advance to the right date on click
 	- plots the items of `todayEvents` to the scrolling time graph
-		- if item is a `WorkTimeBlock`, clicking it should open the Task Detail Page for that block's original task ID
+		- if item is a `WorkTimeBlock`, clicking it should open the Task Detail Page for that block's ID
 		- else, clicking it should open the Event Detail Page for that event's ID

@@ -13,6 +13,6 @@
 	- sections w/o tasks are hidden
 - `assignTask(id: string): void`
 	- assign a task to a time block
-	- collect a start and end time from user
+	- collect a date and start and end time from user
 	- verify that end > start
 	- add the time block w/ the task ID association onto GCalendar
