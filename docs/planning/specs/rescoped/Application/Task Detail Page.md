@@ -3,6 +3,7 @@
 
 # keep track of...
 - `task: TaskItem`: the item in focus
+- `id` via qs
 
 # actions
 - `initialize(): void`

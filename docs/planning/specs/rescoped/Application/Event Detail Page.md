@@ -3,6 +3,7 @@
 
 # keep track of...
 - `event: CalendarItem`: the item in focus
+- `id` via qs
 
 # actions
 - `initialize(): void`
