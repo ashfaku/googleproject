@@ -25,4 +25,4 @@
 	- `display()`
 - `deleteBlock(): void`
 	- `event.delete()`
-	- return to the main planner page
+	- navigate back
