@@ -1,19 +1,66 @@
 #calendar
 {
     width: 70%;
-    margin-left: 20%;
     visibility: hidden;
     position: absolute;
     top: 0;
     background-color: orange;
+    animation-fill-mode: forwards;
 }
 #calendarflex
 {
     display: flex;
     flex-wrap: wrap;
+    gap: 0;
+}
+@keyframes moveRight
+{
+    from 
+    { 
+        left: 5%; 
+    }
+    to
+    { 
+        left: 15%; 
+    }
+}
+@keyframes moveLeft
+{
+    from 
+    { 
+        left: 15%; 
+    }
+    to
+    { 
+        left: 5%; 
+    }
+}
+.calendaron
+{
+    animation: moveRight 1s linear 1;
+}
+.calendaroff
+{
+    animation: moveLeft 1s linear 1;
 }
 .dayBox
 {
     background-color: green;
-    min-width: 13%; /* 100/7 cuz week is 7 days long, but 13% let 7 buttons fit in one row so lol */
+    margin-left: 10px;
+    margin-bottom: 10px;
+    min-width: 8vmax; /* 100/7 cuz week is 7 days long, but 13% let 7 buttons fit in one row so lol */
+    min-height: 8vmax;
+}
+.hidden
+{
+    visibility: hidden;
+}
+.itemList
+{
+    background-color: yellow;
+    overflow-y: scroll;
+    width: 80%;
+    margin-left: 10%;
+    height: 40px;
+    font-size: 10px;
 }
