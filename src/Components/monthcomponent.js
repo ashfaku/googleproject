@@ -1,25 +1,22 @@
 import React from "react";
-import './monthcomponent.css';
+import '../Assets/Styles/monthcomponent.css';
 const MonthComponent = (props) => {
-    const monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
-    for (let i = 0; i < monthNames.length; i++)
-    {
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    for (let i = 0; i < monthNames.length; i++) {
         let holder = monthNames[i];
-        monthNames[i] = <div className = "month">    
-            <button className = "monthButton" onClick={() => {     
-                    document.getElementById("calendar").style.visibility = "visible";
-                }
+        monthNames[i] = <div className="month">
+            <button className="monthButton" onClick={() => {
+                document.getElementById("calendar").style.visibility = "visible";
+            }
             }>{monthNames[i]}</button>
         </div>;
     }
-    return  <div id="monthList">
+    return <div id="monthList">
         {monthNames}
-        <button id = "monthListToggle" onClick = {(e) => {
-            for (let i = 0; i < e.target.parentElement.children.length - 1; i++)
-            {
-                if (e.target.parentElement.children[i].children[0].classList.contains("on"))
-                {
-                    
+        <button id="monthListToggle" onClick={(e) => {
+            for (let i = 0; i < e.target.parentElement.children.length - 1; i++) {
+                if (e.target.parentElement.children[i].children[0].classList.contains("on")) {
+
                     e.target.parentElement.children[i].children[0].classList.add("off");
                     e.target.parentElement.children[i].children[0].classList.remove("on");
                     e.target.innerHTML = "+";
@@ -27,8 +24,7 @@ const MonthComponent = (props) => {
                     e.target.parentElement.children[i].style.maxHeight = "0";
                     document.getElementById("calendar").style.marginLeft = "8%";
                 }
-                else
-                {
+                else {
                     e.target.parentElement.children[i].children[0].classList.add("on");
                     e.target.parentElement.children[i].children[0].classList.remove("off");
                     e.target.innerHTML = "-";
