@@ -1,15 +1,22 @@
 import React from "react";
+import { useNavigate, createSearchParams } from "react-router-dom";
 import '../Assets/Styles/monthcomponent.css';
 const MonthComponent = (props) => {
+    const navigate = useNavigate();
     const monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
     for (let i = 0; i < monthNames.length; i++)
     {
         let holder = monthNames[i];
         monthNames[i] = <div className = "month">    
-            <button className = "monthButton" onClick={() => {     
-                    document.getElementById("calendar").style.visibility = "visible";
-                }
-            }>{monthNames[i]}</button>
+            <button className = "monthButton" onClick={() => {   
+                const params = { month: String(holder), year: 2023 };
+                console.log(params);
+                navigate({
+                    pathname: '/month',
+                    search: `?${createSearchParams(params)}`,
+                });
+            }
+            }>{holder}</button>
         </div>;
     }
     return  <div id="monthList">
@@ -19,9 +26,12 @@ const MonthComponent = (props) => {
             if (e.target.innerHTML === "+")
             {
                 console.log(1);
-
-                document.getElementById("calendar").classList.remove("calendaroff");
-                document.getElementById("calendar").classList.add("calendaron");
+                if (document.getElementById("calendar"))
+                {
+                    document.getElementById("calendar").classList.remove("calendaroff");
+                    document.getElementById("calendar").classList.add("calendaron");
+        
+                }
             }
             else
             {

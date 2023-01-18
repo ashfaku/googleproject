@@ -1,7 +1,6 @@
 #calendar
 {
     width: 70%;
-    visibility: hidden;
     position: absolute;
     top: 0;
     background-color: orange;

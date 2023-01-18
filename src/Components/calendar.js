@@ -33,7 +33,7 @@ const Calendar = (props) => {
             </div>
         );
     }
-    return <div id = "calendar">
+    return <div id = "calendar" className="calendaron">
             <div id = "calendarflex">
                 {days}
 

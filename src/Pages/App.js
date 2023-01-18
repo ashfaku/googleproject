@@ -8,9 +8,11 @@ function App() {
         <Routes>
             <Route exact path = "/" element = {<div>
                                                   <MonthComponent />
-                                                  <Calendar />
                                                 </div>} />
-            <Route exact path = "/hmm" element = {<div>456s</div>} />
+            <Route exact path = "/month" element = {<div>
+                                                      <MonthComponent />
+                                                      <Calendar />
+                                                    </div>} />
             <Route path = "*" element = {<NotFound />} />
           
         </Routes>
