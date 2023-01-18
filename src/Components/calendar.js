@@ -3,7 +3,10 @@ import '../Assets/Styles/calendar.css';
 const Calendar = (props) => {
     let days = [];
     let prevMonthDays = 5;
-    prevMonthDays %= 7; // doesn't make 
+    prevMonthDays %= 7; 
+    let term = window.location.hash.split('?')[1].split('&').map(string => string.split('=')).reduce((obj, [key, value]) => Object.assign(obj, { [key]: value }), {});;
+    console.log(term);
+    
     for (let i = 0; i < prevMonthDays; i++)
     {
         days.push(

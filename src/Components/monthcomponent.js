@@ -9,7 +9,7 @@ const MonthComponent = (props) => {
         let holder = monthNames[i];
         monthNames[i] = <div className = "month">    
             <button className = "monthButton" onClick={() => {   
-                const params = { month: String(holder), year: 2023 };
+                const params = { month: String(holder), year: 2023 }; // i'll add a drop down for year later
                 console.log(params);
                 navigate({
                     pathname: '/month',
