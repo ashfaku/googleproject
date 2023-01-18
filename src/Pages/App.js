@@ -18,6 +18,7 @@ function App() {
         </Routes>
     </Router>
   );
+  // change /month route to be a CalendarView object... need a centralized object to pass everything down from lol
   // if you wanna manually navigate between each url, go to like http://localhost:5000/#/hmm to see the 456s, and
   // http://localhost:5000/#/anythingElse to see NotFound page
 }
