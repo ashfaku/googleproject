@@ -2,6 +2,7 @@ import MonthComponent from '../Components/monthcomponent';
 import Calendar from '../Components/calendar';
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import NotFound from '../Components/notfound'
+import DayView from '../Components/dayview';
 function App() {
   return (
     <Router>
@@ -13,7 +14,7 @@ function App() {
                                                       <MonthComponent />
                                                       <Calendar />
                                                     </div>} />
-            <Route path = "*" element = {<NotFound />} />
+            <Route path = "*" element = {<DayView />} />
           
         </Routes>
     </Router>

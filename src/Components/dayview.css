@@ -1,0 +1,31 @@
+#dayview
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#left
+{
+    margin-right: auto;
+    background-color: green;
+}
+#middle
+{
+    background-color: red;
+}
+#middle ul
+{ 
+    background-color: purple;
+
+    list-style-position: inside;
+}
+#middle ul li
+{
+    text-align: left;
+    background-color: yellow;
+}
+#right
+{
+    background-color: orange;
+    margin-left: auto;
+}
