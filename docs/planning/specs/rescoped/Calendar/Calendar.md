@@ -15,7 +15,7 @@
 - `addItem(name: String, description: String, start: Date, end: Data): CalendarItem
 	- Add a new event to the calendar, and return its corresponding `CalendarItem`
 - `deleteItem(id: String): void`
-	- Delete the event of the given id, and it's prerequisite tasks
+	- Delete the event of the given id
 - `setTitle(id: String, newTitle: String): void`
 	- set a new title for the given event ID
 - `setDescription(id: String, newDecription: String): void`
