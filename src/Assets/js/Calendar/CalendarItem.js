@@ -23,7 +23,7 @@ export class CalendarItem {
         this.#parentCalendar = parentCalendar;
         this.#id = id;
         this.#title = title;
-        this.#description = description;
+        this.#description = JSON.parse(description).description;
         this.#start = start;
         this.#end = end;
     }
@@ -35,7 +35,7 @@ export class CalendarItem {
 
     setDescription(newDescription) {
         this.#description = newDescription;
-        this.#parentCalendar.setDescription(this.#id, newDescription);
+        this.#parentCalendar.setDescription(this.#id, JSON.stringify({ description: newDescription }));
     }
 
     setStartTime(newStartTime) {
