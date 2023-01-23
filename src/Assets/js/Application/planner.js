@@ -1,6 +1,9 @@
 import { Calendar } from "../Calendar/Calendar";
 
 const calendarClient = new Calendar();
+/**
+ * @type {Array<CalendarItem>}
+ */
 let todayEvents;
 
 export function initializePlanner(year, month, day) {

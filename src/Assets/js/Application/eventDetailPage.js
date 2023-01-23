@@ -1,5 +1,8 @@
 import { CalendarItem } from "../Calendar/CalendarItem";
 
+/**
+ * @type {CalendarItem}
+ */
 let event;
 
 /**
