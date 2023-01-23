@@ -6,6 +6,7 @@ let todayEvents;
 export function initializePlanner(year, month, day) {
     todayEvents = calendarClient.getItems(year, month, day);
     display();
+    return todayEvents;
 }
 
 export function display() {

@@ -1,24 +1,34 @@
 import React from "react";
-import { useNavigate, createSearchParams } from "react-router-dom";
+//import { useNavigate, createSearchParams } from "react-router-dom";
 import '../Assets/Styles/monthcomponent.css';
+import Calendar from "./calendar";
 const MonthComponent = (props) => {
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
     const monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+    const yr = 2023;
     for (let i = 0; i < monthNames.length; i++)
     {
         let holder = monthNames[i];
         monthNames[i] = <div className = "month">    
             <button className = "monthButton" onClick={() => {   
                 const params = { month: String(holder), year: 2023 }; // i'll add a drop down for year later
-                console.log(params);
-                navigate({
+              //  console.log(params);
+              /*  navigate({
                     pathname: '/month',
                     search: `?${createSearchParams(params)}`,
                 });
+                */
+
+                props.root.render(<div>
+                    <MonthComponent root = {props.root} />
+                    <Calendar root = {props.root} month = {String(holder)} year = {yr}/>
+
+                </div>);
             }
             }>{holder}</button>
         </div>;
     }
+    console.log(234);
     return  <div id="monthList">
         {monthNames}
         <button id = "monthListToggle" onClick = {(e) => {

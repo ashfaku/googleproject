@@ -1,9 +1,14 @@
-import React from "react";
+import { React, useEffect } from "react";
 import './dayview.css';
+import {initializePlanner} from "../Assets/js/Application/planner";
 
 const DayView = (props) => {
     let items = ["use the computed tab to see an Element's style rules, and there's a -> button for each rule to jump to where it's inherited from",2,3,4,5];
     let hours = [];
+    useEffect(() => {
+        // Code that should run after the component is mounted
+      //  console.log(initializePlanner(props.year, props.month, props.day));
+      }, []);
     for (let i = 1; i < 12; i++)
     {
         hours.push(<div>{i}am</div>)

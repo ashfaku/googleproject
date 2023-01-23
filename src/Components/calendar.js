@@ -1,11 +1,14 @@
 import React from "react";
 import '../Assets/Styles/calendar.css';
+import DayView from "./dayview";
 const Calendar = (props) => {
     let days = [];
     let prevMonthDays = 5;
     prevMonthDays %= 7; 
-    let term = window.location.hash.split('?')[1].split('&').map(string => string.split('=')).reduce((obj, [key, value]) => Object.assign(obj, { [key]: value }), {});;
-    console.log(term);
+   // let term = window.location.hash.split('?')[1].split('&').map(string => string.split('=')).reduce((obj, [key, value]) => Object.assign(obj, { [key]: value }), {});;
+   let month = props.month;
+   let year = props.year; 
+  // console.log(term);
     
     for (let i = 0; i < prevMonthDays; i++)
     {
@@ -18,18 +21,25 @@ const Calendar = (props) => {
     {
         days.push(
             <div className = "dayBox">
-                <div>{i}</div>
+                <div className = "day" onClick={(e) => {
+                    props.root.render(<div>
+                        <DayView year = {year} month = {month} day = {i} />
+                    </div>);
+                }}>{i}</div>
                 <div className = "itemList">
                     <li>Item 1</li>
                     <li>Item 2</li>
                     <li>Item 3</li>
                     <li>Item 1</li>
                     <li>Item 2</li>
-                    <li>Item 3</li>      <li>Item 1</li>
+                    <li>Item 3</li>      
+                    <li>Item 1</li>
                     <li>Item 2</li>
-                    <li>Item 3</li>      <li>Item 1</li>
+                    <li>Item 3</li>      
+                    <li>Item 1</li>
                     <li>Item 2</li>
-                    <li>Item 3</li>      <li>Item 1</li>
+                    <li>Item 3</li>     
+                    <li>Item 1</li>
                     <li>Item 2</li>
                     <li>Item 3</li>
                 </div>

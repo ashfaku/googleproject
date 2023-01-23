@@ -50,6 +50,11 @@
     min-width: 8vmax; /* 100/7 cuz week is 7 days long, but 13% let 7 buttons fit in one row so lol */
     min-height: 8vmax;
 }
+.day
+{
+
+    cursor: pointer;
+}
 .hidden
 {
     visibility: hidden;
