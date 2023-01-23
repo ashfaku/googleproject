@@ -38,6 +38,10 @@ export class TaskItem {
         return this.#done;
     }
 
+    get id() {
+        return this.#id;
+    }
+
     setTitle(newTitle) {
         this.#parentList.setTitle(this.#id, newTitle);
         this.#title = newTitle;
