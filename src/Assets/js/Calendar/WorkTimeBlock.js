@@ -1,3 +1,4 @@
+import { TaskList } from "../List/TaskList";
 import { CalendarItem } from "./CalendarItem";
 
 export class WorkTimeBlock extends CalendarItem {
@@ -7,6 +8,7 @@ export class WorkTimeBlock extends CalendarItem {
         super(parentCalendar, id, title, description, start, end);
 
         let taskId = JSON.parse(description).taskId;
+        this.#originalTask = (new TaskList()).getItem(taskId);
     }
 
     get originalTask() {
