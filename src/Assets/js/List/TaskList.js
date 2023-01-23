@@ -1,3 +1,5 @@
+/* global gapi */
+
 import { TaskItem } from "./TaskItem";
 
 /**

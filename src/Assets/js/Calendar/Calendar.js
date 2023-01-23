@@ -1,3 +1,5 @@
+/* global gapi */
+
 import { CalendarItem } from "./CalendarItem";
 import { WorkTimeBlock } from "./WorkTimeBlock";
 
