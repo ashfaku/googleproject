@@ -25,6 +25,7 @@ export function display() {
     // display task.due
     // display timeblock.start
     // display timeblock.end
+    // set up button handlers
 }
 
 export function updateBlockDate() {
