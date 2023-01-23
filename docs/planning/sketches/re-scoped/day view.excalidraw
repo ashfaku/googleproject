@@ -1128,12 +1128,46 @@
       "originalText": "The main interface of the planner app\non load, show a sign in button,\nthen populate content after sign in"
     },
     {
-      "id": "8vDcB_QBR0YDu1baPP90S",
       "type": "text",
+      "version": 46,
+      "versionNonce": 863740696,
+      "isDeleted": false,
+      "id": "8vDcB_QBR0YDu1baPP90S",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
       "x": 312.72727966308594,
       "y": 802.2670478820801,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
       "width": 133,
       "height": 21,
+      "seed": 1485988120,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [],
+      "updated": 1674365108001,
+      "link": null,
+      "locked": false,
+      "fontSize": 16,
+      "fontFamily": 1,
+      "text": "[log out button]",
+      "baseline": 15,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "[log out button]"
+    },
+    {
+      "id": "WQEuOZmcST9ClExKx91Xk",
+      "type": "freedraw",
+      "x": 338.1818084716797,
+      "y": 828.7670783996582,
+      "width": 95.45458984375,
+      "height": 43.6363525390625,
       "angle": 0,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
@@ -1144,22 +1178,176 @@
       "opacity": 100,
       "groupIds": [],
       "roundness": null,
-      "seed": 1485988120,
-      "version": 46,
-      "versionNonce": 863740696,
+      "seed": 584471625,
+      "version": 31,
+      "versionNonce": 610334569,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1674365108001,
+      "updated": 1674447883878,
       "link": null,
       "locked": false,
-      "text": "[log out button]",
-      "fontSize": 16,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0.9090576171875
+        ],
+        [
+          0.90911865234375,
+          3.6363525390625
+        ],
+        [
+          0.90911865234375,
+          9.09088134765625
+        ],
+        [
+          0.90911865234375,
+          13.6363525390625
+        ],
+        [
+          0.90911865234375,
+          19.09088134765625
+        ],
+        [
+          0.90911865234375,
+          22.727294921875
+        ],
+        [
+          0.90911865234375,
+          26.3636474609375
+        ],
+        [
+          0.90911865234375,
+          29.09088134765625
+        ],
+        [
+          -0.9090576171875,
+          32.727294921875
+        ],
+        [
+          -2.72723388671875,
+          36.3636474609375
+        ],
+        [
+          -4.54547119140625,
+          39.09088134765625
+        ],
+        [
+          -7.272705078125,
+          40
+        ],
+        [
+          -10.9090576171875,
+          41.81817626953125
+        ],
+        [
+          -14.54547119140625,
+          42.727294921875
+        ],
+        [
+          -21.81817626953125,
+          43.6363525390625
+        ],
+        [
+          -31.81817626953125,
+          43.6363525390625
+        ],
+        [
+          -40.9090576171875,
+          43.6363525390625
+        ],
+        [
+          -50,
+          43.6363525390625
+        ],
+        [
+          -59.09088134765625,
+          43.6363525390625
+        ],
+        [
+          -64.54547119140625,
+          43.6363525390625
+        ],
+        [
+          -70,
+          43.6363525390625
+        ],
+        [
+          -72.72723388671875,
+          43.6363525390625
+        ],
+        [
+          -77.272705078125,
+          42.727294921875
+        ],
+        [
+          -80.9090576171875,
+          42.727294921875
+        ],
+        [
+          -86.3636474609375,
+          41.81817626953125
+        ],
+        [
+          -89.09088134765625,
+          40.9090576171875
+        ],
+        [
+          -91.81817626953125,
+          40.9090576171875
+        ],
+        [
+          -94.54547119140625,
+          40.9090576171875
+        ],
+        [
+          -94.54547119140625,
+          40.9090576171875
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "lastCommittedPoint": [
+        -94.54547119140625,
+        40.9090576171875
+      ]
+    },
+    {
+      "id": "OSoeSZCi0vobYNHfAsmTM",
+      "type": "text",
+      "x": 51.81819152832031,
+      "y": 841.1761360168457,
+      "width": 148,
+      "height": 98,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 131813287,
+      "version": 66,
+      "versionNonce": 1799339593,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1674447900600,
+      "link": null,
+      "locked": false,
+      "text": "calls logout()\nwith a callback\nto load the\nsignin screen",
+      "fontSize": 20,
       "fontFamily": 1,
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 15,
+      "baseline": 91,
       "containerId": null,
-      "originalText": "[log out button]"
+      "originalText": "calls logout()\nwith a callback\nto load the\nsignin screen"
     }
   ],
   "appState": {
