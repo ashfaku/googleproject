@@ -1,5 +1,5 @@
 import { React, useEffect } from "react";
-import './dayview.css';
+import '../Assets/Styles/dayview.css';
 
 const DayView = (props) => {
     let items = ["use the computed tab to see an Element's style rules, and there's a -> button for each rule to jump to where it's inherited from", 2, 3, 4, 5];
