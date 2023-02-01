@@ -37,7 +37,7 @@ export class TaskList {
             maxResults: 100
         }).then((response) => {
             for (let task of response.result.items) {
-                tasks.push(new TaskItem(task.id, task.title, task.notes, Date.parse(task.due)));
+                tasks.push(new TaskItem(this, task.id, task.title, task.notes, Date.parse(task.due), task.status == "completed"));
             }
         });
 
@@ -54,7 +54,7 @@ export class TaskList {
             tasklist: this.#listId,
             task: id
         }).then((response) => {
-            return new TaskItem(response.result.id, response.result.title, response.result.notes, Date.parse(response.result.due));
+            return new TaskItem(this, response.result.id, response.result.title, response.result.notes, Date.parse(response.result.due), response.result.status == "completed");
         });
     }
 
@@ -72,7 +72,7 @@ export class TaskList {
             notes: description,
             due: due.toISOString()
         }).then((response) => {
-            return new TaskItem(response.result.id, response.result.title, response.result.notes, Date.parse(response.result.due));
+            return new TaskItem(this, response.result.id, response.result.title, response.result.notes, Date.parse(response.result.due), false);
         });
     }
 
