@@ -56,7 +56,7 @@ export class Calendar {
             orderBy: 'startTime'
         }).then((response) => {
             for (let event of response.result.items) {
-                events.push(this.objectFactory(event.summary, event.description, Date.parse(event.start.dateTime), Date.parse(event.end.dateTime)));
+                events.push(this.objectFactory(event.summary, event.id, event.description, Date.parse(event.start.dateTime), Date.parse(event.end.dateTime)));
             }
         });
 
@@ -73,7 +73,7 @@ export class Calendar {
             calendarId: this.#calendarId,
             eventId: id
         }).then((response) => {
-            return this.objectFactory(response.result.summary, response.result.description, Date.parse(response.result.start.dateTime), Date.parse(response.result.end.dateTime))
+            return this.objectFactory(response.result.summary, response.result.id, response.result.description, Date.parse(response.result.start.dateTime), Date.parse(response.result.end.dateTime))
         });
     }
 
@@ -99,7 +99,7 @@ export class Calendar {
                 }
             }
         }).then((response) => {
-            return this.objectFactory(response.result.summary, response.result.description, Date.parse(response.result.start.dateTime), Date.parse(response.result.end.dateTime))
+            return this.objectFactory(response.result.summary, response.result.id, response.result.description, Date.parse(response.result.start.dateTime), Date.parse(response.result.end.dateTime))
         })
     }
 
@@ -174,15 +174,15 @@ export class Calendar {
         });
     }
 
-    objectFactory(title, description, start, end) {
+    objectFactory(title, id, description, start, end) {
         try {
             if (JSON.parse(description).hasOwnProperty("taskId")) {
                 return new WorkTimeBlock(this, title, description, start, end);
             } else {
-                return new CalendarItem(this, title, description, start, end);
+                return new CalendarItem(this, id, title, description, start, end);
             }
         } catch (e) {
-            return new CalendarItem(this, title, description, start, end);
+            return new CalendarItem(this, id, title, description, start, end);
         }
     }
 }
