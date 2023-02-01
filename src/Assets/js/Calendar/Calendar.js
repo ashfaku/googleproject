@@ -56,7 +56,7 @@ export class Calendar {
             orderBy: 'startTime'
         }).then((response) => {
             for (let event of response.result.items) {
-                events.push(this.objectFactory(event.summary, event.description, Date(Date.parse(event.start.dateTime)), Date(Date.parse(event.end.dateTime))));
+                events.push(this.objectFactory(event.summary, event.description, Date.parse(event.start.dateTime), Date.parse(event.end.dateTime)));
             }
         });
 
@@ -73,7 +73,7 @@ export class Calendar {
             calendarId: this.#calendarId,
             eventId: id
         }).then((response) => {
-            return this.objectFactory(response.result.summary, response.result.description, Date(Date.parse(response.result.start.dateTime)), Date(Date.parse(response.result.end.dateTime)))
+            return this.objectFactory(response.result.summary, response.result.description, Date.parse(response.result.start.dateTime), Date.parse(response.result.end.dateTime))
         });
     }
 
@@ -99,7 +99,7 @@ export class Calendar {
                 }
             }
         }).then((response) => {
-            return this.objectFactory(response.result.summary, response.result.description, Date(Date.parse(response.result.start.dateTime)), Date(Date.parse(response.result.end.dateTime)))
+            return this.objectFactory(response.result.summary, response.result.description, Date.parse(response.result.start.dateTime), Date.parse(response.result.end.dateTime))
         })
     }
 
