@@ -35,7 +35,7 @@ export class CalendarItem {
 
     setDescription(newDescription) {
         this.#description = newDescription;
-        this.#parentCalendar.setDescription(this.#id, description);
+        this.#parentCalendar.setDescription(this.#id, this.#description);
     }
 
     setStartTime(newStartTime) {
