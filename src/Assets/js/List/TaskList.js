@@ -9,10 +9,18 @@ export class TaskList {
     #listId;
     #nextPageToken;
 
-    constructor() {
-        gapi.client.tasks.tasklists.list().then((response) => {
-            this.#listId = response.result.items[0].id;
+    constructor(id) {
+        this.#listId = id;
+    }
+
+    static async taskListFactory() {
+        let id;
+
+        await gapi.client.tasks.tasklists.list().then((response) => {
+            id = response.result.items[0].id;
         });
+
+        return new TaskList(id);
     }
 
     /**

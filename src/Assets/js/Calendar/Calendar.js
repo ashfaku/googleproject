@@ -14,16 +14,24 @@ export class Calendar {
     /**
      * Find the user's primary calendar and store its ID.
      */
-    constructor() {
-        gapi.client.calendar.calendarList.list().then((response) => {
+    constructor(id) {
+        this.#calendarId = id;
+    }
+
+    static async calendarFactory() {
+        let id;
+
+        await gapi.client.calendar.calendarList.list().then((response) => {
             for (let calendar of response.result.items) {
                 if (calendar.primary) {
-                    this.#calendarId = calendar.id;
-                    break;
+                    id = calendar.id;
                 }
             }
         });
+
+        return new Calendar(id);
     }
+
 
     /**
      * Gets CalendarItems for a given day.
