@@ -16,6 +16,6 @@ export function initializeEventDetailPage(event) {
 export function display() {
     document.getElementById("title").innerText = calEvent.title;
     document.getElementById("description").innerText = calEvent.description;
-    document.getElementById("start-time").innerText = Date(calEvent.start);
-    document.getElementById("end-time").innerText = Date(calEvent.end);
+    document.getElementById("start-time").innerText = new Date(calEvent.start);
+    document.getElementById("end-time").innerText = new Date(calEvent.end);
 }
