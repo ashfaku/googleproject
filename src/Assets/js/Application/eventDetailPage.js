@@ -3,19 +3,19 @@ import { CalendarItem } from "../Calendar/CalendarItem";
 /**
  * @type {CalendarItem}
  */
-let event;
+let calEvent;
 
 /**
  * @param {CalendarItem} event The CalendarItem to display details for.
  */
 export function initializeEventDetailPage(event) {
-    this.event = event;
+    calEvent = event;
     display();
 }
 
 export function display() {
-    // display event.title
-    // display event.description
-    // display event.start
-    // display event.end
+    document.getElementById("title").innerText = calEvent.title;
+    document.getElementById("description").innerText = calEvent.description;
+    document.getElementById("start-time").innerText = Date(calEvent.start);
+    document.getElementById("end-time").innerText = Date(calEvent.end);
 }
