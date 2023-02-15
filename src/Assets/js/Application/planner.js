@@ -1,13 +1,15 @@
 import { Calendar } from "../Calendar/Calendar";
+import { CalendarItem } from "../Calendar/CalendarItem";
 
-const calendarClient = new Calendar();
+let calendarClient;
 /**
  * @type {Array<CalendarItem>}
  */
 let todayEvents;
 
-export function initializePlanner(year, month, day) {
-    todayEvents = calendarClient.getItems(year, month, day);
+export async function initializePlanner(year, month, day) {
+    calendarClient = await Calendar.calendarFactory()
+    todayEvents = await calendarClient.getItems(year, month, day);
     display();
     return todayEvents;
 }
