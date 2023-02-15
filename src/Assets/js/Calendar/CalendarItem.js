@@ -23,7 +23,7 @@ export class CalendarItem {
         this.#parentCalendar = parentCalendar;
         this.#id = id;
         this.#title = title;
-        this.#description = description;
+        this.#description = description || "";
         this.#start = start;
         this.#end = end;
     }
