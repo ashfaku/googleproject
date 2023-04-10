@@ -1,5 +1,6 @@
 import { React, useEffect } from "react";
 import '../Assets/Styles/eventDetails.css';
+import DayView from "./dayview";
 
 const EventDetails = (props) => {
 
@@ -11,6 +12,11 @@ const EventDetails = (props) => {
     }, []);
 
     return <div id="event-details">
+        <button id="back" onClick={() => {
+            props.root.render(<div>
+                <DayView root={props.root} year={props.backYear} month={props.backMonth} day={props.backDay}></DayView>
+            </div>);
+        }}>⬅️</button>
         <h1 id="title">Event Title</h1>
         <p id="description">Event description</p>
         <br />
