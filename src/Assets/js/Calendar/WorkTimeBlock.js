@@ -6,9 +6,13 @@ export class WorkTimeBlock extends CalendarItem {
 
     constructor(parentCalendar, id, title, description, start, end) {
         super(parentCalendar, id, title, description, start, end);
+        this.resolveOriginalTask(description);
+    }
 
+    async resolveOriginalTask(description) {
         let taskId = JSON.parse(description).taskId;
-        this.#originalTask = (new TaskList()).getItem(taskId);
+        let tasksClient = await TaskList.taskListFactory();
+        this.#originalTask = await tasksClient.getItem(taskId);
     }
 
     get originalTask() {
