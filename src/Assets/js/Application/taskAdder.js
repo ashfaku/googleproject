@@ -6,10 +6,16 @@ import { TaskList } from "../List/TaskList";
  * @type {Array<TaskItem>}
  */
 let upcomingTasks;
+/**
+ * @type {TaskList}
+ */
+let tasksClient;
 
-export function initializeTaskAdder() {
-    upcomingTasks = (new TaskList()).getItems();
+export async function initializeTaskAdder() {
+    tasksClient = await TaskList.taskListFactory();
+    upcomingTasks = await tasksClient.getItems();
     display();
+    return upcomingTasks;
 }
 
 export function display() {
