@@ -177,7 +177,7 @@ export class Calendar {
     objectFactory(title, id, description, start, end) {
         try {
             if (JSON.parse(description).hasOwnProperty("taskId")) {
-                return new WorkTimeBlock(this, title, description, start, end);
+                return new WorkTimeBlock(this, id, title, description, start, end);
             } else {
                 return new CalendarItem(this, id, title, description, start, end);
             }

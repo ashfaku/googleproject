@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from "react";
 import '../Assets/Styles/dayview.css';
 import DayView from "./dayview";
+import { monthNameToNumber } from "../Assets/js/utilities/utils";
 
 const TaskList = (props) => {
     let hours = [];
@@ -17,7 +18,7 @@ const TaskList = (props) => {
 
                 for (let item of items) {
                     elements.push(<li><button onClick={() => {
-
+                        taskAdderDriver.assignTask(item, new Date(props.backYear, monthNameToNumber(props.backMonth) - 1, props.backDay, 0, 0), new Date(props.backYear, monthNameToNumber(props.backMonth) - 1, props.backDay, 1, 0));
                     }}>➕ {item.title}</button></li>);
                 }
 
