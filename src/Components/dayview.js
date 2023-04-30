@@ -49,15 +49,24 @@ const DayView = (props) => {
     }
     hours.push(<div>Midnight</div>);
     return <div id="dayview">
-        <div id="left">Back</div>
+        <button id="left" onClick={() => {
+            props.root.render(<div>
+                <DayView root={props.root} year={props.year} month={props.month} day={props.day - 1} />
+            </div>)
+        }}>Back</button>
         <div id="middle">
             <div id="time">{hours}</div>
             <ul id="list">
+                {props.month} {props.day}, {props.year}
                 {itemElements}
             </ul>
 
         </div>
-        <div id="right">Forward</div>
+        <button id="right" onClick={() => {
+            props.root.render(<div>
+                <DayView root={props.root} year={props.year} month={props.month} day={props.day + 1} />
+            </div>)
+        }}>Forward</button>
         <button id="add-block-button" onClick={() => {
             props.root.render(<div>
                 <TaskList root={props.root} backYear={props.year} backMonth={props.month} backDay={props.day}></TaskList>
