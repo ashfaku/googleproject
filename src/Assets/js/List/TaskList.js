@@ -50,12 +50,14 @@ export class TaskList {
      * @returns {TaskItem} The task with the given ID.
      */
     async getItem(id) {
+        let ret;
         await gapi.client.tasks.tasks.get({
             tasklist: this.#listId,
             task: id
         }).then((response) => {
-            return new TaskItem(this, response.result.id, response.result.title, response.result.notes, Date.parse(response.result.due), response.result.status == "completed");
+            ret = new TaskItem(this, response.result.id, response.result.title, response.result.notes, Date.parse(response.result.due), response.result.status == "completed");
         });
+        return ret;
     }
 
     /**
@@ -97,7 +99,7 @@ export class TaskList {
             tasklist: this.#listId,
             task: id,
             title: newTitle
-        });
+        }).execute(() => alert("updated"));
     }
 
     /**
@@ -110,7 +112,7 @@ export class TaskList {
             tasklist: this.#listId,
             task: id,
             notes: newDescription
-        });
+        }).execute(() => alert("updated"));
     }
 
     /**
@@ -123,7 +125,7 @@ export class TaskList {
             tasklist: this.#listId,
             task: id,
             due: newTime.toISOString()
-        });
+        }).execute(() => alert("updated"));
     }
 
     /**
@@ -136,6 +138,6 @@ export class TaskList {
             tasklist: this.#listId,
             task: id,
             status: done ? "completed" : "needsAction"
-        });
+        }).execute(() => alert("updated"));
     }
 }

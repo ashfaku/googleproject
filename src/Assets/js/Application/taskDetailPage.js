@@ -20,64 +20,26 @@ export function initializeTaskDetailPage(block) {
 }
 
 export function display() {
-    // display task.title
-    // display task.description
-    // display task.due
-    // display timeblock.start
-    // display timeblock.end
-    // set up button handlers
+    document.getElementById("title").innerText = task.title;
+    document.getElementById("description").innerText = task.description;
+
+    let startString = (new Date(timeblock.start)).toISOString();
+    document.getElementById("start-time").value = startString.substring(0, startString.indexOf("."));
+
+    let endString = (new Date(timeblock.end)).toISOString();
+    document.getElementById("end-time").value = endString.substring(0, endString.indexOf("."));
+
+    // bug: timezone considerations
 }
 
-export function updateBlockDate() {
-    // get a date from the user
-    /**
-     * @type {Date}
-     */
-    let newDate;
-
-    let newStart = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate(), timeblock.start.getHours(), timeblock.start.getMinutes());
-    let newEnd = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate(), timeblock.end.getHours(), timeblock.end.getMinutes());
-
-    timeblock.setStartTime(newStart);
-    timeblock.setEndTime(newEnd);
-
-    display();
+export function updateHandler() {
+    updateBlockDate(document.getElementById("start-time").value, document.getElementById("end-time").value);
 }
 
-export function updateBlockStart() {
-    /**
-     * @type {Date}
-     */
-    let newTime;
+export function updateBlockDate(newStart, newEnd) {
+    if (newEnd <= newStart) return alert("Start time has to come before end time");
 
-    do {
-        // get a time from the user
-    }
-    while (newTime > timeblock.end);
-
-    let newStart = new Date(timeblock.start.getFullYear(), timeblock.start.getMonth(), timeblock.start.getDate(), newTime.getHours(), newTime.getMinutes());
-
-    timeblock.setStartTime(newStart);
-
-    display();
-}
-
-export function updateBlockEnd() {
-    /**
-     * @type {Date}
-     */
-    let newTime;
-
-    do {
-        // get a time from the user
-    }
-    while (newTime < timeblock.start);
-
-    let newEnd = new Date(timeblock.end.getFullYear(), timeblock.end.getMonth(), timeblock.end.getDate(), newTime.getHours(), newTime.getMinutes());
-
-    timeblock.setEndTime(newEnd);
-
-    display();
+    timeblock.setTimes(new Date(newStart), new Date(newEnd));
 }
 
 export function deleteBlock() {

@@ -38,14 +38,10 @@ export class CalendarItem {
         this.#parentCalendar.setDescription(this.#id, this.#description);
     }
 
-    setStartTime(newStartTime) {
-        this.start = newStartTime;
-        this.#parentCalendar.setStartTime(this.#id, newStartTime);
-    }
-
-    setEndTime(newEndTime) {
+    setTimes(newStartTime, newEndTime) {
+        this.#start = newStartTime;
         this.#end = newEndTime;
-        this.#parentCalendar.setEndTime(this.#id, newEndTime);
+        this.#parentCalendar.setTimes(this.#id, newStartTime, newEndTime);
     }
 
     get id() {
@@ -69,6 +65,6 @@ export class CalendarItem {
     }
 
     delete() {
-        this.#parentCalendar.delete(this.#id);
+        this.#parentCalendar.deleteItem(this.#id);
     }
 }

@@ -27,7 +27,7 @@ export class TaskItem {
     }
 
     get description() {
-        return this.#description;
+        return this.#description || "";
     }
 
     get due() {

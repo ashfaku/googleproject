@@ -107,7 +107,7 @@ export class Calendar {
         gapi.client.calendar.events.delete({
             calendarId: this.#calendarId,
             eventId: id
-        });
+        }).execute(() => alert("updated"));
     }
 
     /**
@@ -122,7 +122,7 @@ export class Calendar {
             resource: {
                 summary: newTitle
             }
-        });
+        }).execute(() => alert("updated"));
     }
 
     /**
@@ -137,42 +137,30 @@ export class Calendar {
             resource: {
                 description: newDescription
             }
-        });
+        }).execute(() => alert("updated"));
     }
 
     /**
-     * Updates the start time of an event.
+     * Updates the time of an event.
      * @param {String} id ID of the event to update.
      * @param {Date} newStartTime The new start time of the event.
+     * @param {Date} newEndTime  The new end time of the event.
      */
-    setStartTime(id, newStartTime) {
+    setTimes(id, newStartTime, newEndTime) {
         gapi.client.calendar.events.patch({
             calendarId: this.#calendarId,
             eventId: id,
             resource: {
                 start: {
                     dateTime: newStartTime.toISOString()
-                }
-            }
-        });
-    }
-
-    /**
-     * Updates the end time of an event.
-     * @param {String} id ID of the event to update.
-     * @param {Date} newEndTime The new end time of the event.
-     */
-    setEndTime(id, newEndTime) {
-        gapi.client.calendar.events.patch({
-            calendarId: this.#calendarId,
-            eventId: id,
-            resource: {
+                },
                 end: {
                     dateTime: newEndTime.toISOString()
                 }
             }
-        });
+        }).execute(() => alert("updated"));
     }
+
 
     objectFactory(title, id, description, start, end) {
         try {

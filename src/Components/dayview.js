@@ -20,7 +20,7 @@ const DayView = (props) => {
                 const items = await plannerDriver.initializePlanner(props.year, monthNameToNumber(props.month), props.day);
 
                 for (let item of items) {
-                    if (typeof item === WorkTimeBlock) {
+                    if (item.constructor.name == "WorkTimeBlock") {
                         elements.push(<li><button onClick={() => {
                             props.root.render(<div>
                                 <TaskDetails root={props.root} event={item} backYear={props.year} backMonth={props.month} backDay={props.day} />
