@@ -5,6 +5,8 @@ import '../Assets/Styles/dayview.css';
 import EventDetails from "./EventDetails";
 import TaskDetails from "./TaskDetails";
 import TaskList from "./TaskList";
+import MonthComponent from "./monthcomponent";
+import Login from "./login";
 
 const DayView = (props) => {
     let hours = [];
@@ -48,30 +50,44 @@ const DayView = (props) => {
         hours.push(<div>{i}pm</div>);
     }
     hours.push(<div>Midnight</div>);
-    return <div id="dayview">
-        <button id="left" onClick={() => {
-            props.root.render(<div>
-                <DayView root={props.root} year={props.year} month={props.month} day={props.day - 1} />
-            </div>)
-        }}>Back</button>
-        <div id="middle">
-            <div id="time">{hours}</div>
-            <ul id="list">
-                {props.month} {props.day}, {props.year}
-                {itemElements}
-            </ul>
+    return <div>
+        <div id="dayview">
+            <button id="date-selection-button" onClick={() => {
+                props.root.render(<div>
+                    <MonthComponent root={props.root} />
+                </div>)
+            }}>📅</button>
+            <button id="left" onClick={() => {
+                props.root.render(<div>
+                    <DayView root={props.root} year={props.year} month={props.month} day={props.day - 1} />
+                </div>)
+            }}>Back</button>
+            <div id="middle">
+                <div id="time">{hours}</div>
+                <ul id="list">
+                    {props.month} {props.day}, {props.year}
+                    {itemElements}
+                </ul>
 
+            </div>
+            <button id="right" onClick={() => {
+                props.root.render(<div>
+                    <DayView root={props.root} year={props.year} month={props.month} day={props.day + 1} />
+                </div>)
+            }}>Forward</button>
+            <button id="add-block-button" onClick={() => {
+                props.root.render(<div>
+                    <TaskList root={props.root} backYear={props.year} backMonth={props.month} backDay={props.day}></TaskList>
+                </div>);
+            }}>➕</button>
         </div>
-        <button id="right" onClick={() => {
-            props.root.render(<div>
-                <DayView root={props.root} year={props.year} month={props.month} day={props.day + 1} />
-            </div>)
-        }}>Forward</button>
-        <button id="add-block-button" onClick={() => {
-            props.root.render(<div>
-                <TaskList root={props.root} backYear={props.year} backMonth={props.month} backDay={props.day}></TaskList>
-            </div>);
-        }}>➕</button>
+        <button id="logout-button" onClick={() => {
+            window.signOut(() => {
+                props.root.render(<div>
+                    <Login root={props.root} />
+                </div>)
+            })
+        }}>Disconnect Google</button>
     </div>
 
 };

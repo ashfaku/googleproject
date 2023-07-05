@@ -9,7 +9,7 @@ const Login = (props) => {
 
             </div>)
         });
-    }} id="loginB">Sign in With Google</button>;
+    }} id="loginB">Connect to Google</button>;
     return <div>Welcome to the Planner App
         <br /><br />
         The main screen will show you
