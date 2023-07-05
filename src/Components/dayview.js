@@ -87,7 +87,7 @@ const DayView = (props) => {
                     <Login root={props.root} />
                 </div>)
             })
-        }}>Disconnect Google</button>
+        }}>Disconnect from Google</button>
     </div>
 
 };
