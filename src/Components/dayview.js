@@ -51,6 +51,7 @@ const DayView = (props) => {
     }
     hours.push(<div>Midnight</div>);
     return <div>
+        <div id="current-date-display"><span>{props.month} {props.day}, {props.year}</span></div>
         <div id="dayview">
             <button id="date-selection-button" onClick={() => {
                 props.root.render(<div>
@@ -65,7 +66,6 @@ const DayView = (props) => {
             <div id="middle">
                 <div id="time">{hours}</div>
                 <ul id="list">
-                    {props.month} {props.day}, {props.year}
                     {itemElements}
                 </ul>
 
